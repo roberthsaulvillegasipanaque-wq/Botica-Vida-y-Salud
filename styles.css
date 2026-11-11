@@ -1,0 +1,446 @@
+
+/* =====================================
+   CENTRO MÉDICO VIDA Y SALUD
+   HOJA DE ESTILOS PRINCIPAL
+===================================== */
+
+:root {
+    --azul: #064b9b;
+    --oscuro: #082e67;
+    --celeste: #16a9df;
+    --blanco: #ffffff;
+    --fondo: #f1f6fc;
+    --texto: #10264b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+}
+
+/* ENCABEZADO */
+
+header {
+    background: var(--blanco);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 7%;
+    box-shadow: 0 3px 12px #0001;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    background: var(--azul);
+    color: white;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 30px;
+}
+
+.logo h2 {
+    color: var(--azul);
+    font-size: 21px;
+}
+
+.logo small {
+    color: #52647c;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--oscuro);
+    font-weight: bold;
+    font-size: 14px;
+    transition: .3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--celeste);
+}
+
+/* PORTADA PRINCIPAL */
+
+.hero {
+    background: linear-gradient(100deg, #063d85, #0878c9);
+    color: white;
+    padding: 75px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero h1 {
+    font-size: clamp(35px, 5vw, 65px);
+    line-height: 1.1;
+    margin-bottom: 18px;
+}
+
+.hero h1 span {
+    color: #39c5f5;
+}
+
+.hero p {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 28px;
+}
+
+.hero-image {
+    background: #ffffff20;
+    border: 2px solid #ffffff50;
+    border-radius: 25px;
+    width: 300px;
+    min-height: 240px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 25px;
+    font-size: 90px;
+}
+
+/* BOTONES */
+
+.btn {
+    display: inline-block;
+    background: var(--celeste);
+    color: white;
+    padding: 14px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: white;
+    color: var(--azul);
+    transform: translateY(-3px);
+}
+
+/* SECCIONES */
+
+section {
+    padding: 65px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    color: var(--azul);
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #65758b;
+}
+
+/* SERVICIOS */
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.service {
+    background: white;
+    padding: 28px 20px;
+    border-radius: 16px;
+    border-left: 5px solid var(--celeste);
+    box-shadow: 0 5px 18px #12345b12;
+    transition: .3s;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px #12345b20;
+}
+
+.service .icon {
+    font-size: 38px;
+    margin-bottom: 14px;
+}
+
+.service h3 {
+    color: var(--azul);
+    font-size: 18px;
+    margin-bottom: 9px;
+}
+
+.service p {
+    color: #68778a;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* SIGNOS VITALES */
+
+.vitales {
+    background: #e4f4ff;
+}
+
+.vital-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.vital {
+    background: white;
+    text-align: center;
+    border-radius: 15px;
+    padding: 24px 10px;
+    box-shadow: 0 4px 12px #00000008;
+}
+
+.vital span {
+    display: block;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.vital h3 {
+    color: var(--azul);
+    font-size: 15px;
+}
+
+/* ESPECIALISTAS */
+
+.specialists {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+.doctor {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 5px 20px #0001;
+    transition: .3s;
+}
+
+.doctor:hover {
+    transform: translateY(-5px);
+}
+
+.doctor-photo {
+    height: 180px;
+    background: linear-gradient(135deg, #d8efff, #9cccf0);
+    display: grid;
+    place-items: center;
+    font-size: 75px;
+}
+
+.doctor-info {
+    padding: 22px;
+}
+
+.doctor-info h3 {
+    color: var(--azul);
+    margin-bottom: 9px;
+}
+
+.doctor-info p {
+    color: #68778a;
+    font-size: 14px;
+}
+
+/* ATENCIÓN 24 HORAS */
+
+.attention {
+    background: var(--oscuro);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 35px;
+    text-align: center;
+}
+
+.attention h2 {
+    font-size: 28px;
+    margin: 5px;
+}
+
+.attention .clock {
+    font-size: 55px;
+}
+
+/* CONTACTO */
+
+.contact {
+    background: white;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.contact-card {
+    padding: 30px;
+    border-radius: 15px;
+    background: #edf6ff;
+    text-align: center;
+}
+
+.contact-card span {
+    font-size: 40px;
+}
+
+.contact-card h3 {
+    margin: 12px 0;
+    color: var(--azul);
+}
+
+.contact-card a {
+    color: #078acb;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+    background: #062653;
+    color: white;
+    text-align: center;
+    padding: 28px;
+    line-height: 1.8;
+}
+
+/* ANIMACIONES */
+
+.service,
+.doctor,
+.contact-card {
+    animation: aparecer .7s ease both;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* DISEÑO PARA CELULARES Y TABLETS */
+
+@media (max-width: 750px) {
+
+    header {
+        flex-direction: column;
+        gap: 18px;
+        padding: 15px 5%;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 55px 7%;
+    }
+
+    .hero-image {
+        width: 100%;
+        min-height: 170px;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+    section {
+        padding: 48px 6%;
+    }
+
+    .section-title h2 {
+        font-size: 26px;
+    }
+
+    .attention h2 {
+        font-size: 21px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .logo h2 {
+        font-size: 18px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    nav {
+        gap: 11px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+}
